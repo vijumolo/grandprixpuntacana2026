@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Punta Cana Grand Prix 2026 | Resultados Finales</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">6ta Edicion | Dia 3 | Circuito Punta Cana</p>
+        <h1>Punta Cana Grand Prix 2026</h1>
+        <p class="hero__copy">General final por puntos, metas volantes y diplomas virtuales de participacion.</p>
+      </div>
+      <div class="hero__stats" aria-label="Resumen del evento">
+        <div>
+          <strong id="totalAthletes">0</strong>
+          <span>registros</span>
+        </div>
+        <div>
+          <strong id="totalCategories">0</strong>
+          <span>categorias</span>
+        </div>
+        <div>
+          <strong id="totalDiplomas">0</strong>
+          <span>diplomas</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="controls" aria-label="Filtros de resultados">
+        <div class="tabs" role="tablist" aria-label="Tipo de clasificacion">
+          <button class="tab is-active" type="button" data-ranking="puntos">General puntos</button>
+          <button class="tab" type="button" data-ranking="volantes">Metas volantes</button>
+        </div>
+
+        <label class="field">
+          <span>Categoria</span>
+          <select id="categoryFilter"></select>
+        </label>
+
+        <label class="field field--search">
+          <span>Buscar</span>
+          <input id="searchFilter" type="search" placeholder="Nombre, dorsal o equipo">
+        </label>
+      </section>
+
+      <section class="layout">
+        <div class="results-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Clasificacion final</p>
+              <h2 id="rankingTitle">General puntos</h2>
+            </div>
+            <span id="resultCount" class="counter">0 resultados</span>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Pos.</th>
+                  <th>Dorsal</th>
+                  <th>Deportista</th>
+                  <th>Equipo</th>
+                  <th>Puntos</th>
+                  <th>Diploma</th>
+                </tr>
+              </thead>
+              <tbody id="resultsBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="diploma-panel" aria-label="Diploma seleccionado">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Diploma virtual</p>
+              <h2 id="diplomaName">Selecciona un deportista</h2>
+            </div>
+          </div>
+
+          <div id="diplomaMeta" class="diploma-meta">El visor abrira la pagina exacta del diploma cuando el PDF lo permite.</div>
+
+          <div class="diploma-actions">
+            <a id="viewDiploma" class="button button--primary" href="DIPLOMAS.pdf" target="_blank" rel="noreferrer">Ver</a>
+            <a id="downloadDiploma" class="button" href="DIPLOMAS.pdf" download>Descargar PDF</a>
+            <button id="printDiploma" class="button" type="button">Imprimir</button>
+          </div>
+
+          <iframe id="diplomaFrame" title="Vista previa del diploma" src="about:blank"></iframe>
+        </aside>
+      </section>
+    </main>
+
+    <script src="assets/data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
